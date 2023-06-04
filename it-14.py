@@ -6,6 +6,8 @@ import os
 r=Fore.RED
 w=Fore.RESET
 g=Fore.GREEN
+c=Fore.CYAN
+y=Fore.YELLOW
 
 os.system("clear")
 
@@ -19,9 +21,6 @@ parser = argparse.ArgumentParser(description='Track IP location.')
 
 # Add the argument for IP address
 parser.add_argument('--ip', type=str, help='The IP address to track')
-
-# Add the argument for output file
-parser.add_argument('--output', type=str, help='The output file to save the location information')
 
 # Parse the arguments from the command line
 args = parser.parse_args()
@@ -56,29 +55,13 @@ else:
         isp = data['isp']
 
         # Display the complete location information
-        print("-----------------------------------------")
-        print(f" IP Location Information: {ip_address}")
-        print("-----------------------------------------")
-        print(f" City: {city}")
-        print(f" Region: {region}")
-        print(f" Country: {country}")
-        print(f" ZIP Code: {zip_code}")
-        print(f" Coordinates: {lat}, {lon}")
-        print(f" ISP: {isp}")
-        print("-----------------------------------------")
-        print(f"                           {g}Code by: FII14{w}")
-        # Check if the output file argument is provided
-        if args.output:
-            output_file = args.output
-            with open(output_file, 'w') as file:
-                file.write("-----------------------------------------\n")
-                file.write(f"IP Location Information: {ip_address}\n")
-                file.write("-----------------------------------------\n")
-                file.write(f"City: {city}\n")
-                file.write(f"Region: {region}\n")
-                file.write(f"Country: {country}\n")
-                file.write(f"ZIP Code: {zip_code}\n")
-                file.write(f"Coordinates: {lat}, {lon}\n")
-                file.write(f"ISP: {isp}\n")
-                file.write("---------------------------------------\n")
-                file.write("                         Code by: FII14\n")
+        print("+----------------------------------------")
+        print(f"| {y}IP Location Information{w}: {g}{ip_address}{w}")
+        print("+----------------------------------------")
+        print(f"[{g}+{w}] {c}City{w}: {city}")
+        print(f"[{g}+{w}] {c}Region{w}: {region}")
+        print(f"[{g}+{w}] {c}Country{w}: {country}")
+        print(f"[{g}+{w}] {c}ZIP Code{w}: {zip_code}")
+        print(f"[{g}+{w}] {c}Coordinates{w}: {lat}, {lon}")
+        print(f"[{g}+{w}] {c}ISP{w}: {isp}")
+        print("+----------------------------------------")
