@@ -15,11 +15,11 @@ os.system("clear")
 
 # Create the argument parser
 print(f"""{r}
- .___.  ._.  .__.  .   
-   |     |   [__]  |   
-   |    _|_  |  |  |___                    
-{w}""")
-parser = argparse.ArgumentParser(description='Track IP location.')
+ .___.  ._.  .__.  .
+   |     |   [__]  |
+   |    _|_  |  |  |___ {w}Track ip address location.
+""")
+parser = argparse.ArgumentParser()
 
 # Add the argument for IP address
 parser.add_argument('--ip', type=str, help='The IP address to track')
