@@ -1,5 +1,13 @@
+## Installation
+```
+git clone https://github.com/FII14/IP-TRACKER
+cd IP-TRACKER
+chmod +x install
+./install
+```
+
 ## Usage
 ```
-python3 ip-tracker.py --ip <ip>
+ip-tracker --ip <ip>
 ```
 
