@@ -1,8 +1,22 @@
+import argparse
 import requests
 import os
 
-# Prompt the user to enter an IP address
-ip_address = input("Enter the IP address: ")
+# Create the argument parser
+parser = argparse.ArgumentParser(description='Track IP location.')
+
+# Add the argument for IP address
+parser.add_argument('-i', '--ip', type=str, help='The IP address to track')
+
+# Parse the arguments from the command line
+args = parser.parse_args()
+
+# Check if the IP address argument is provided
+if args.ip:
+    ip_address = args.ip
+else:
+    print("IP address is required. Please provide the IP address using the -i or --ip option.")
+    exit(1)
 
 # Make an HTTP request to retrieve location data from the IP-API service
 response = requests.get(f"http://ip-api.com/json/{ip_address}")
@@ -30,15 +44,14 @@ else:
 
         # Display the complete location information
         print("")
-        print("-----------------------------------------")
+        print("-------------------------------------------")
         print(f" IP Location Information: {ip_address}")
-        print("-----------------------------------------")
+        print("-------------------------------------------")
         print(f" City: {city}")
         print(f" Region: {region}")
         print(f" Country: {country}")
         print(f" ZIP Code: {zip_code}")
         print(f" Coordinates: {lat}, {lon}")
         print(f" ISP: {isp}")
-        print("---------------------------------------")
+        print("-------------------------------------------")
         print("")
-
