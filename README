@@ -5,9 +5,9 @@ cd IP-TRACKER
 chmod +x install
 ./install
 
-
-## Usage
-
+Usage
 ip-tracker --ip <ip>
 
+Example
+ip-tracker --ip 182.10.108.101
 
