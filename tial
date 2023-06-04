@@ -15,12 +15,9 @@ os.system("clear")
 
 # Create the argument parser
 print(f"""{r}
- 
-.___.  ._.  .__.  .   
-  |     |   [__]  |   
-  |    _|_  |  |  |___
-                      
-
+ .___.  ._.  .__.  .   
+   |     |   [__]  |   
+   |    _|_  |  |  |___                    
 {w}""")
 parser = argparse.ArgumentParser(description='Track IP location.')
 
