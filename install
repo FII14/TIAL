@@ -1,4 +1,4 @@
-chmod +x ip-tracker
-mv ip-tracker /usr/bin
+chmod +x tial
+mv tial /usr/bin
 pip3 install -r requirements.txt
 echo "Installation completed."
