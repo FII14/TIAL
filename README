@@ -2,19 +2,4 @@ TIAL
 
 Track ip address location.
 
-Installation
-
-$ git clone https://github.com/FII14/TIAL
-$ cd TIAL
-$ chmod +x install
-$ ./install
-
-Usage
-
-tial --ip <ip>
-
-Example
-
-tial --ip 182.10.108.101
-
-~ LIVE LIKE A CLOWN! ~ 
+COPYRIGHT (C) 2023 FII14
